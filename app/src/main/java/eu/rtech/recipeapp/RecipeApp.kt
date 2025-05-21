@@ -14,7 +14,7 @@ fun  RecipeApp(navController: NavHostController){
 
     NavHost(navController = navController, startDestination =Screen.RecipeScreen.route ) {
         composable(route = Screen.RecipeScreen.route){
-            RecipeScreen(viewstate = viewstate, navigateToDetail = {
+            RecipeScreen(viewModel = viewstate, navigateToDetail = {
                 navController.currentBackStackEntry?.savedStateHandle?.set("dog",it)
                 navController.navigate(Screen.DetailScreen.route)
             })
